@@ -1,0 +1,82 @@
+####
+POST http://localhost:8080/api/v1/ingredients
+Content-Type: application/json
+
+{
+  "name": "Onion"
+}
+
+> {%
+    client.global.set("ingredientId", response.body.id)
+%}
+
+####
+GET http://localhost:8080/api/v1/ingredients
+
+####
+GET http://localhost:8080/api/v1/ingredients/{{ingredientId}}
+
+
+
+####
+POST http://localhost:8080/api/v1/menuItems
+Content-Type: application/json
+
+{
+  "title": "Chowder",
+  "description": "A great option for someone who wants a quick and tasty meal!"
+}
+
+> {%
+    client.global.set("menuItemId", response.body.id)
+%}
+
+####
+GET http://localhost:8080/api/v1/menuItems
+####
+GET http://localhost:8080/api/v1/menuItems/{{menuItemId}}
+
+
+
+####
+POST http://localhost:8080/api/v1/singleUsers
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "userName": "johndoe23",
+  "email": "john_doe@gmail.com"
+}
+
+> {%
+    client.global.set("singleUserId", response.body.id)
+%}
+
+####
+GET http://localhost:8080/api/v1/singleUsers
+
+####
+GET http://localhost:8080/api/v1/singleUsers/{{singleUserId}}
+
+####
+PUT http://localhost:8080/api/v1/ingredients/{{ingredientId}}/singleUsers/{{singleUserId}}
+####
+PUT http://localhost:8080/api/v1/ingredients/{{ingredientId}}/menuItems/{{menuItemId}}
+####
+PUT http://localhost:8080/api/v1/singleUsers/{{singleUserId}}/menuItems/{{menuItemId}}
+
+####
+POST http://localhost:8080/api/v1/registration
+Content-Type: application/json
+
+{
+  "firstName": "John",
+  "lastName": "Doe",
+  "email": "john_doe@gmail.com",
+  "password": "password"
+}
+
+> {%
+    client.global.set("appUserId", response.body.id)
+%}

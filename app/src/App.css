@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.ingredients,
+.menuItems,
+.users,
+.sign-up {
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    align-items: center;
+    /*justify-content: center;*/
+    font-size: 3rem;
+    background-image: url('../public/images/kitchen-window.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ingredients > *,
+.menuItems > *,
+.users > *,
+.sign-up > * {
+    margin-top: 30px;
+}
+
+.home {
+    background-image: url("../public/images/tools-on-table.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ingredients {
+    color: #242424;
+    font-size: 20px;
+}
+
+.ingredients > h1 {
+    font-size: 50px;
+}
+
+.ingredients-table {
+    width: 100%;
+    text-align: center;
+}
+
+.ingredients-table, .ingredients-table-header, .ingredients-table-item {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+.menuItems {
+    color: #242424;
+    font-size: 20px;
+}
+
+.menuItems > h1 {
+    font-size: 50px;
+}
+
+.menuItems-table {
+    width: 100%;
+    text-align: center;
+}
+
+.menuItems-table, .menuItems-table-header, .menuItems-table-item {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.users {
+    color: #242424;
+    font-size: 20px;
+}
+
+.users > h1 {
+    font-size: 50px;
+}
+
+.users-table {
+    width: 100%;
+    text-align: center;
+}
+
+.users-table, .users-table-header, .users-table-item {
+    border: 1px solid black;
+}
+
+.bottom-button {
+    margin-top: 50px;
+}
+
+
+.sign-up {
+    color: #242424;
+    font-size: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen {
+    .add-ingredients {
+        background-image: url("../public/images/cutting-board.png");
+        background-position: center;
+        background-size: 700px;
+        background-repeat: no-repeat;
+        display: table;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        opacity: 1;
+        padding-left: 0;
+        transition: all 0.5s ease;
+    }
+
+    .add-ingredients-container {
+        margin-top: 300px;
+    }
+
+    .add-ingredients-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .add-ingredients.active {
+        /*background: #242424;*/
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        /*width: 100%;*/
+    }
+    .ingredients.active {
+        filter:  blur(3px);
+        transition: all 0.5s ease;
+    }
+    .ingredients {
+        transition: all 0.5s ease;
+    }
+}
