@@ -2,6 +2,11 @@
 
 FeastTogether is a social web application that brings people together through the joy of cooking and sharing meals. Whether you want to discover new recipes based on your available ingredients or organize community feasts, FeastTogether aims to foster connections and create memorable dining experiences.
 
+# Important
+
+This application is still in progress - more updates coming soon!
+We thank you for your patience.
+
 ## Key Features
 
 - **Personalized Menu Recommendations:** Add your food items to get menu suggestions based on what you have.
